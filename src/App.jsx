@@ -14,7 +14,8 @@ function App() {
 	return (
 		<>
 			<h1>Rick and Morty</h1>
-			<img src={character.image} alt="sssssss" />
+			<img src={character.image} alt={`Imagem de ${character.name}`} />
+			<p>{character.name}</p>
 			<button onClick={() => setCount(count + 1)}>Próximo personagem</button>
 		</>
 	);
