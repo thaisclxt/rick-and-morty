@@ -1,3 +1,4 @@
+import { Button } from "@mantine/core";
 import React, { useState, useEffect } from "react";
 import { api } from "./api";
 
@@ -16,7 +17,13 @@ function App() {
 			<h1>Rick and Morty</h1>
 			<img src={character.image} alt={`Imagem de ${character.name}`} />
 			<p>{character.name}</p>
-			<button onClick={() => setCount(count + 1)}>Próximo personagem</button>
+			<Button
+				variant="gradient"
+				gradient={{ from: "indigo", to: "cyan" }}
+				onClick={() => setCount(count + 1)}
+			>
+				Próximo personagem
+			</Button>
 		</>
 	);
 }
