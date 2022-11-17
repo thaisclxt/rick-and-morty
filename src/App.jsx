@@ -1,4 +1,4 @@
-import { Button } from "@mantine/core";
+import { Button, Image } from "@mantine/core";
 import React, { useState, useEffect } from "react";
 import { api } from "./api";
 
@@ -15,8 +15,13 @@ function App() {
 	return (
 		<>
 			<h1>Rick and Morty</h1>
-			<img src={character.image} alt={`Imagem de ${character.name}`} />
-			<p>{character.name}</p>
+			<Image
+				width={350}
+				height={350}
+				src={character.image}
+				alt={`Imagem de ${character.name}`}
+				caption={character.name}
+			/>
 			<Button
 				variant="gradient"
 				gradient={{ from: "indigo", to: "cyan" }}
